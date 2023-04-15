@@ -1,6 +1,13 @@
 import './style.css';
 import * as THREE from "three";
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+import TexturePng01 from "./public/cube08_r.png";
+import TexturePng02 from "./public/cube08_l.png";
+import TexturePng03 from "./public/cube08_u.png";
+import TexturePng04 from "./public/cube08_d.png";
+import TexturePng05 from "./public/cube08_f.png";
+import TexturePng06 from "./public/cube08_b.png";
+
 
 //canvas
 const canvas = document.querySelector("#webgl");
@@ -34,12 +41,12 @@ scene.add(directionalLight);
 
 //cubetexture
 const urls01 = [
-  "./public/cube08_r.png",
-  "./public/cube08_l.png",
-  "./public/cube08_u.png",
-  "./public/cube08_d.png",
-  "./public/cube08_f.png",
-  "./public/cube08_b.png",
+  TexturePng01,
+  TexturePng02,
+  TexturePng03,
+  TexturePng04,
+  TexturePng05,
+  TexturePng06,
 ]
 const loader01 = new THREE.CubeTextureLoader();
 const textureCube01 = loader01.load(urls01);
